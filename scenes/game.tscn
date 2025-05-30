@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqgvwt6il87aj"]
+
+[ext_resource type="Script" uid="uid://bs075mlwa5dsw" path="res://scenes/paint2.gd" id="1_yqjtg"]
+
+[node name="Paint" type="Node2D"]
+script = ExtResource("1_yqjtg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(552, 304)
+
+[node name="Line2D" type="Line2D" parent="."]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 46.0
+offset_top = 90.0
+offset_right = 290.0
+offset_bottom = 555.0
+
+[node name="HSlider" type="HSlider" parent="Control"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 87.0
+offset_right = 198.0
+offset_bottom = 103.0
