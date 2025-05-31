@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cqgvwt6il87aj"]
+[gd_scene load_steps=11 format=3 uid="uid://cqgvwt6il87aj"]
 
 [ext_resource type="Script" uid="uid://np2uvjr7vymw" path="res://scripts/color_selector.gd" id="1_iywne"]
 [ext_resource type="Script" uid="uid://bs075mlwa5dsw" path="res://scripts/paint_manager.gd" id="1_yqjtg"]
 [ext_resource type="Script" uid="uid://dpmbvxct1l6es" path="res://scripts/signal_manager.gd" id="2_yqjtg"]
 [ext_resource type="Script" uid="uid://d36t743liv1al" path="res://scripts/personality_traits.gd" id="3_lnu2h"]
 [ext_resource type="Script" uid="uid://ci2qns8fx51d0" path="res://resources/personality_trait.gd" id="5_iywne"]
+[ext_resource type="Script" uid="uid://bjktmlppxq7ey" path="res://scripts/ui_manager.gd" id="6_p57ef"]
 
 [sub_resource type="Resource" id="Resource_p57ef"]
 script = ExtResource("5_iywne")
@@ -16,6 +17,18 @@ metadata/_custom_type_script = "uid://ci2qns8fx51d0"
 script = ExtResource("5_iywne")
 name = "Test2"
 color = Color(0, 0, 0.823529, 1)
+metadata/_custom_type_script = "uid://ci2qns8fx51d0"
+
+[sub_resource type="Resource" id="Resource_iywne"]
+script = ExtResource("5_iywne")
+name = "Colère"
+color = Color(0.65098, 0, 0, 1)
+metadata/_custom_type_script = "uid://ci2qns8fx51d0"
+
+[sub_resource type="Resource" id="Resource_gee14"]
+script = ExtResource("5_iywne")
+name = "Tristesse"
+color = Color(0, 0, 0.760784, 1)
 metadata/_custom_type_script = "uid://ci2qns8fx51d0"
 
 [node name="Paint" type="Node2D"]
@@ -32,30 +45,60 @@ offset_left = 80.0
 offset_top = 124.0
 offset_right = 324.0
 offset_bottom = 460.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
-[node name="BrushWidthSlider" type="HSlider" parent="Control"]
+[node name="BrushWidthControl" type="Control" parent="Control"]
+anchors_preset = 0
+offset_right = 164.0
+offset_bottom = 72.0
+
+[node name="BrushWidthSlider" type="HSlider" parent="Control/BrushWidthControl"]
 layout_mode = 0
-offset_left = 54.0
-offset_top = 87.0
-offset_right = 198.0
-offset_bottom = 103.0
+offset_left = 6.0
+offset_top = 38.0
+offset_right = 150.0
+offset_bottom = 55.0
 min_value = 20.0
-value = 20.0
+value = 50.0
+
+[node name="Label" type="Label" parent="Control/BrushWidthControl"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 7.0
+offset_right = 99.0
+offset_bottom = 30.0
+text = "Brush width"
 
 [node name="ColorSelector" type="GridContainer" parent="Control"]
+custom_minimum_size = Vector2(60, 60)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.106557
-anchor_top = 0.473214
-anchor_right = 0.967213
-anchor_bottom = 1.07143
-offset_right = -10.0
-offset_bottom = -1.0
-theme_override_constants/h_separation = 50
-theme_override_constants/v_separation = 50
-columns = 5
+anchor_left = 0.0860656
+anchor_top = 0.291667
+anchor_right = 0.704918
+anchor_bottom = 0.889881
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
 script = ExtResource("1_iywne")
 metadata/_edit_use_anchors_ = true
+
+[node name="ResetButton" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 253.0
+offset_right = 54.0
+offset_bottom = 284.0
+text = "Reset"
+
+[node name="SubmitButton" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 288.0
+offset_right = 66.0
+offset_bottom = 319.0
+text = "Submit"
 
 [node name="PaintManager" type="Node2D" parent="."]
 script = ExtResource("1_yqjtg")
@@ -65,6 +108,18 @@ script = ExtResource("2_yqjtg")
 
 [node name="PersonalityTraitManager" type="Node2D" parent="."]
 script = ExtResource("3_lnu2h")
-personality_traits = Array[ExtResource("5_iywne")]([SubResource("Resource_p57ef"), SubResource("Resource_u5sy4")])
+personality_traits = Array[ExtResource("5_iywne")]([SubResource("Resource_p57ef"), SubResource("Resource_u5sy4"), SubResource("Resource_iywne"), SubResource("Resource_gee14")])
 
-[connection signal="value_changed" from="Control/BrushWidthSlider" to="SignalManager" method="_on_h_slider_value_changed"]
+[node name="UIManager" type="Node2D" parent="."]
+script = ExtResource("6_p57ef")
+
+[node name="UIResults" type="Node2D" parent="."]
+position = Vector2(880, 132)
+
+[node name="Label" type="Label" parent="UIResults"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="value_changed" from="Control/BrushWidthControl/BrushWidthSlider" to="SignalManager" method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="Control/ResetButton" to="SignalManager" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Control/SubmitButton" to="SignalManager" method="_on_submit_button_pressed"]

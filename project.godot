@@ -15,6 +15,10 @@ run/main_scene="uid://cqgvwt6il87aj"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[dotnet]
+
+project/assembly_name="Blunder God"
+
 [rendering]
 
 environment/defaults/default_clear_color=Color(0.241156, 0.241156, 0.241156, 1)

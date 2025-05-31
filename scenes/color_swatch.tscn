@@ -3,12 +3,12 @@
 [ext_resource type="Script" uid="uid://ivq22naurkgg" path="res://scripts/color_swatch.gd" id="1_h4sed"]
 
 [node name="ColorSwatch" type="Button"]
+z_index = 10
+custom_minimum_size = Vector2(60, 60)
 offset_right = 60.0
 offset_bottom = 60.0
 size_flags_horizontal = 0
 script = ExtResource("1_h4sed")
-pt_color = null
-pt_name = null
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -33,3 +33,5 @@ offset_right = 53.0
 offset_bottom = 58.0
 theme_override_font_sizes/font_size = 10
 text = "test"
+horizontal_alignment = 1
+vertical_alignment = 1
