@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://css8so6lcp5jw"
-path="res://.godot/imported/painceau6.png-b2d73e2c46e0c602b2a3facd44ca8fc6.ctex"
+uid="uid://b6rvtw8h2ypbg"
+path="res://.godot/imported/palettu.png-ca73f5f35e4d005fd36fd87f3ef31581.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/painceau6.png"
-dest_files=["res://.godot/imported/painceau6.png-b2d73e2c46e0c602b2a3facd44ca8fc6.ctex"]
+source_file="res://assets/textures/palettu.png"
+dest_files=["res://.godot/imported/palettu.png-ca73f5f35e4d005fd36fd87f3ef31581.ctex"]
 
 [params]
 

@@ -5,6 +5,8 @@ extends Node2D
 
 var image: Image
 var texture: ImageTexture
+var cursor_image: Image
+var cursor_texture: ImageTexture
 var pressed: bool = false
 var last_pos: Vector2i = Vector2i.ZERO
 var brush_width: float = 50.0
@@ -18,7 +20,15 @@ func _ready():
 	texture = ImageTexture.create_from_image(image)
 	canvas.texture = texture
 	count_pixels()
-	brush_color = personality_trait_manager.personality
+	brush_color = personality_trait_manager.personality_traits[1].color
+	set_custom_brush_cursor(brush_width)
+
+func set_custom_brush_cursor(size: float):
+	var tex2d_cursor: Texture2D = load("res://assets/textures/painceau6.png")
+	cursor_image = tex2d_cursor.get_image()
+	cursor_image.resize(55 +int(size), 55 + int(size))
+	cursor_texture = ImageTexture.create_from_image(cursor_image)
+	Input.set_custom_mouse_cursor(cursor_texture)
 
 func _input(event):
 	if is_mouse_over_image(event.position) :
@@ -28,7 +38,7 @@ func _input(event):
 				var local_pos = get_image_pixel_from_mouse(canvas, event.position) #sprite.to_local(event.position)
 				var x = int(local_pos.x)
 				var y = int(local_pos.y)
-
+	
 				if x >= 0 and x < image.get_width() and y >= 0 and y < image.get_height() :
 					paint(local_pos, brush_width, brush_color)
 	

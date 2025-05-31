@@ -5,6 +5,7 @@ extends Node2D
 
 func _on_h_slider_value_changed(value: float) -> void:
 	paint_manager.brush_width = value
+	paint_manager.set_custom_brush_cursor(value)
 
 func _on_color_selected(color: Color) :
 	paint_manager.brush_color = color
