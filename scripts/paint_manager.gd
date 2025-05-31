@@ -10,12 +10,14 @@ var last_pos: Vector2i = Vector2i.ZERO
 var brush_width: float = 50.0
 var brush_color: Color = Color(1, 0, 0, 1)
 var color_results: Array[ColorResult] = []
+var pixels_count: int = 0
 
 func _ready():
 	var tex2d: Texture2D = load("res://assets/textures/man.png")
 	image = tex2d.get_image()
 	texture = ImageTexture.create_from_image(image)
 	canvas.texture = texture
+	count_pixels()
 
 func _input(event):
 	if is_mouse_over_image(event.position) :
@@ -98,19 +100,30 @@ func get_results() :
 			if image.get_pixel(x, y).a != 0 :
 				var c = image.get_pixel(x, y)
 				for pt in personality_trait_manager.personality_traits:
-					#print(str(c) + " == " + str(pt.color))
 					if colors_are_close(c, pt.color) :
-						print("color !")
 						if color_result_exist(pt.name) :
 							var cr = get_color_result(pt.name)
 							cr.pixels += 1
 						else :
 							var cr = ColorResult.new()
 							cr.personality_trait = pt
-							cr.pixels = 1;
+							cr.pixels = 1
 							color_results.append(cr)
 	
+	for cr2 in color_results:
+		if cr2.pixels > 0:
+			cr2.percent = round_to_dec(float(cr2.pixels) / float(pixels_count) * 100, 2)
+	
 	return color_results
+
+func round_to_dec(num, digit)->float:
+	return round(num * pow(10.0, digit)) / pow(10.0, digit)
+	
+func count_pixels():
+	for x in range(image.get_width()):
+		for y in range(image.get_height()):
+			if image.get_pixel(x, y).a != 0 :
+				pixels_count += 1
 
 func color_result_exist(pt_name: String):
 	var exist = false
