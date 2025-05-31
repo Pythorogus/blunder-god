@@ -1,45 +1,55 @@
 extends Node2D
 
-@onready var man: Sprite2D = $Man
-@onready var sprite: Sprite2D = $Sprite2D
+@onready var canvas: Sprite2D = $"../Canvas"
 
 var image: Image
 var texture: ImageTexture
 var pressed: bool = false
-var last_pos: Vector2i
+var last_pos: Vector2i = Vector2i.ZERO
+var brush_width:float = 20.0
+var brush_color:Color = Color(1, 0, 0, 1)
 
 func _ready():
-	#image = Image.create(256, 256, false, Image.FORMAT_RGBA8)
-	image = Image.new()
-	image.load("res://assets/textures/man.png")
-	#image.fill(Color(1, 1, 1, 1)) # Blanc opaque
-	
+	var tex2d: Texture2D = load("res://assets/textures/man.png")
+	image = tex2d.get_image()
 	texture = ImageTexture.create_from_image(image)
-	sprite.texture = texture
+	canvas.texture = texture
 
 func _input(event):
 	if event is InputEventMouseButton :
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			pressed = event.pressed
-			var local_pos = get_image_pixel_from_mouse(sprite, event.position) #sprite.to_local(event.position)
+			var local_pos = get_image_pixel_from_mouse(canvas, event.position) #sprite.to_local(event.position)
 			var x = int(local_pos.x)
 			var y = int(local_pos.y)
 
 			if x >= 0 and x < image.get_width() and y >= 0 and y < image.get_height() :
-				image.set_pixel(x, y, Color(1, 0, 0, 1)) # Rouge
-				paint(local_pos,10,Color(1, 0, 0, 1))
+				paint(local_pos, brush_width, brush_color)
 			
 	elif event is InputEventMouseMotion and pressed:
-		var current_pos = get_image_pixel_from_mouse(sprite, event.position)
-		draw_line_between_points(last_pos, current_pos, 10, Color(1, 0, 0, 1))
+		var current_pos = get_image_pixel_from_mouse(canvas, event.position)
+		
+		if last_pos and last_pos != Vector2i.ZERO:
+			pass
+			#draw_line_between_points(last_pos, current_pos, brush_width, brush_color)
+		
 		last_pos = current_pos
-		#paint(get_image_pixel_from_mouse(sprite, event.position),10,Color(1, 0, 0, 1))
+		paint(get_image_pixel_from_mouse(canvas, event.position), brush_width, brush_color)
+		
+	elif event is InputEventMouseButton and !pressed:
+		last_pos = Vector2i.ZERO
 
-func paint(position:Vector2, width:int, color:Color)->void:
+func paint(pos: Vector2, width: float, color: Color) -> void:
+	var radius := width / 2.0
 	for x2 in range(width):
 		for y2 in range(width):
-			if image.get_pixel(position.x+x2-(width/2),position.y+y2-(width/2)).a != 0 :
-				image.set_pixel(position.x+x2-(width/2), position.y+y2-(width/2), color) # Rouge
+			var dx := x2 - radius
+			var dy := y2 - radius
+			if dx * dx + dy * dy <= radius * radius:
+				var px := int(pos.x + dx)
+				var py := int(pos.y + dy)
+				if image.get_pixel(px, py).a != 0:
+					image.set_pixel(px, py, color)
 	
 	texture.update(image)
 	
