@@ -18,6 +18,7 @@ func _ready():
 	texture = ImageTexture.create_from_image(image)
 	canvas.texture = texture
 	count_pixels()
+	brush_color = personality_trait_manager.personality
 
 func _input(event):
 	if is_mouse_over_image(event.position) :
