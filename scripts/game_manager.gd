@@ -6,8 +6,10 @@ extends Node2D
 @onready var personality_trait_manager: Node2D = $"../PersonalityTraitManager"
 
 func get_results():
-	ui_manager.print_results(paint_manager.get_results())
-	
+	var results = paint_manager.get_results()
+	var personality = personality_manager.get_personality(results)
+	ui_manager.print_results(results,personality)
+
 func set_custom_brush_cursor(value: float):
 	paint_manager.brush_width = value
 	paint_manager.set_custom_brush_cursor(value)

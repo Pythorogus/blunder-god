@@ -492,7 +492,7 @@ sprite_frames = SubResource("SpriteFrames_yr4ag")
 autoplay = "default"
 
 [node name="Canvas" type="Sprite2D" parent="."]
-position = Vector2(644, 304)
+position = Vector2(604, 324)
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -546,25 +546,25 @@ metadata/_edit_use_anchors_ = true
 [node name="ResetButton" type="Button" parent="Control"]
 z_index = 1
 layout_mode = 0
-offset_left = 75.0
-offset_top = 376.0
-offset_right = 126.0
-offset_bottom = 407.0
+offset_left = 66.0
+offset_top = 351.0
+offset_right = 117.0
+offset_bottom = 382.0
 text = "Reset"
 
 [node name="SubmitButton" type="Button" parent="Control"]
 z_index = 1
 layout_mode = 0
-offset_left = 75.0
-offset_top = 411.0
-offset_right = 138.0
-offset_bottom = 442.0
+offset_left = 66.0
+offset_top = 386.0
+offset_right = 129.0
+offset_bottom = 417.0
 text = "Submit"
 
 [node name="Palettu" type="Sprite2D" parent="Control"]
-position = Vector2(152.58, 203.5)
+position = Vector2(137, 172)
 rotation = -0.243728
-scale = Vector2(1.08104, 1.08104)
+scale = Vector2(1.00357, 1.00357)
 texture = ExtResource("104_473mq")
 
 [node name="GameManager" type="Node2D" parent="."]
@@ -588,11 +588,12 @@ script = ExtResource("109_1va0p")
 personalities = Array[ExtResource("120_ip3rd")]([ExtResource("123_o5ny5")])
 
 [node name="UIResults" type="Node2D" parent="."]
-position = Vector2(880, 132)
+position = Vector2(808, 94)
 
 [node name="Label" type="Label" parent="UIResults"]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_right = 296.0
+offset_bottom = 472.0
+autowrap_mode = 2
 
 [node name="SparkleParticles" type="GPUParticles2D" parent="."]
 amount = 15

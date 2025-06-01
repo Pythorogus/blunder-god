@@ -14,14 +14,14 @@ var last_pos: Vector2i = Vector2i.ZERO
 var brush_width: float = 50.0
 var brush_color: Color
 var color_results: Array[ColorResult] = []
-var pixels_count: int = 0
+var pixels_count: int = 36840
 
 func _ready():
 	var tex2d: Texture2D = load("res://assets/textures/man.png")
 	image = tex2d.get_image()
 	texture = ImageTexture.create_from_image(image)
 	canvas.texture = texture
-	count_pixels()
+	#count_pixels() #bug, écrit à la dure pour le moment
 	brush_color = personality_trait_manager.personality_traits[1].color
 	set_custom_brush_cursor(brush_width)
 
@@ -112,7 +112,7 @@ func reset() -> void:
 	
 	texture.update(image)
 
-func get_results() :
+func get_results() -> Array[ColorResult] :
 	color_results = []
 	for x in range(image.get_width()):
 		for y in range(image.get_height()):
@@ -128,10 +128,12 @@ func get_results() :
 							cr.personality_trait = pt
 							cr.pixels = 1
 							color_results.append(cr)
-	
+
 	for cr2 in color_results:
 		if cr2.pixels > 0:
-			cr2.percent = round_to_dec(float(cr2.pixels) / float(pixels_count) * 100, 2)
+			print("PIXELS " + cr2.personality_trait.name + " : " + str(cr2.pixels))
+			print(pixels_count)
+			cr2.percent = round_to_dec(cr2.pixels / float(pixels_count) * 100, 2)
 	
 	return color_results
 
