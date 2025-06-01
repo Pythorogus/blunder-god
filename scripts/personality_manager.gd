@@ -2,7 +2,7 @@ extends  Node2D
 
 @export var personalities: Array[Personality]
 
-var delta:float = 10.0
+var delta:float = 20.0
 
 func get_personality(color_results: Array[ColorResult]) -> Personality:
 	var personality = null
@@ -17,8 +17,8 @@ func get_personality(color_results: Array[ColorResult]) -> Personality:
 				if pts[i].name == cr.personality_trait.name:
 					traits_checks.append(true)
 		
-		# Est-ce que les résultats possèdent les bons traits
-		if traits_checks.size() == pts.size():
+		# Est-ce que les résultats possèdent les bons traits, et qu'il n'y en a pas plus que prévu
+		if traits_checks.size() == pts.size() and color_results.size() == pts.size():
 			for i in pts.size():
 				for cr in color_results:
 					if pts[i].name == cr.personality_trait.name:
@@ -39,17 +39,20 @@ func get_personality(color_results: Array[ColorResult]) -> Personality:
 				var max_wrong_percent = 0
 				for ipc in percent_checks.size():
 					if !percent_checks[ipc]:
-						for cr2 in color_results:
-							if pts[ipc].name == cr2.personality_trait.name and cr2.percent > max_wrong_percent:
+						for cr2 in color_results:							
+							# Entre autres, si le résultat est un % plus bas que le seuil, on skip (les antagonistes sont là
+							# cr2.percent > ptsp[ipc]
+							if cr2.percent > ptsp[ipc] and pts[ipc].name == cr2.personality_trait.name and cr2.percent > max_wrong_percent:
 								print("Check " + pts[ipc].name + " : " + str(percent_checks[ipc]) + " " + str(cr2.percent) + "% => " + str(ptsp[ipc]))
 								max_wrong_percent = ptsp[ipc]
 								max_wrong_i = ipc
 				
-				print("Mauvais trait le plus haut : " + pts[max_wrong_i].name)
-				for pa in p.personality_antagonists:
-					if pa.personality_antagonist_trait.name == pts[max_wrong_i].name:
-						personality = pa
-						break
+				if max_wrong_i != -1:
+					print("Mauvais trait le plus haut : " + pts[max_wrong_i].name)
+					for pa in p.personality_antagonists:
+						if pa.personality_antagonist_trait.name == pts[max_wrong_i].name:
+							personality = pa
+							break
 	
 	return personality
 

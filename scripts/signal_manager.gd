@@ -15,3 +15,6 @@ func _on_reset_button_pressed():
 
 func _on_submit_button_pressed():
 	game_manager.get_results()
+
+func _on_next_mission_button_pressed() -> void:
+	game_manager.next_mission()

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvnfroh5fl7wp"]
+
+[ext_resource type="Texture2D" uid="uid://uktv3qvftvop" path="res://assets/textures/end.jpg" id="1_3d26k"]
+[ext_resource type="Theme" uid="uid://bc4hjg04abucs" path="res://font.tres" id="2_3d26k"]
+
+[node name="End" type="Node2D"]
+
+[node name="End" type="Sprite2D" parent="."]
+position = Vector2(578, 321)
+scale = Vector2(0.873698, 0.873698)
+texture = ExtResource("1_3d26k")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 413.0
+offset_top = 217.0
+offset_right = 726.0
+offset_bottom = 272.0
+theme = ExtResource("2_3d26k")
+theme_override_font_sizes/font_size = 50
+text = "Thanks for playing"

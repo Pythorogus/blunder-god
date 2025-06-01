@@ -1,6 +1,7 @@
-[gd_scene load_steps=141 format=3 uid="uid://cqgvwt6il87aj"]
+[gd_scene load_steps=143 format=3 uid="uid://cqgvwt6il87aj"]
 
 [ext_resource type="Script" uid="uid://np2uvjr7vymw" path="res://scripts/color_selector.gd" id="1_iywne"]
+[ext_resource type="AudioStream" uid="uid://bruphrwtk1wm5" path="res://assets/musics/jingle.ogg" id="1_vnd7u"]
 [ext_resource type="Script" uid="uid://bs075mlwa5dsw" path="res://scripts/paint_manager.gd" id="1_yqjtg"]
 [ext_resource type="Script" uid="uid://dpmbvxct1l6es" path="res://scripts/signal_manager.gd" id="2_yqjtg"]
 [ext_resource type="Script" uid="uid://d36t743liv1al" path="res://scripts/personality_trait_manager.gd" id="3_lnu2h"]
@@ -109,6 +110,7 @@
 [ext_resource type="Texture2D" uid="uid://fwttcfiftf06" path="res://assets/animations/menu/Bourdieu_test.blend0059.png" id="101_max3w"]
 [ext_resource type="Texture2D" uid="uid://cupgbg6k5302l" path="res://assets/animations/menu/Bourdieu_test.blend0060.png" id="102_nmeq6"]
 [ext_resource type="Texture2D" uid="uid://b6rvtw8h2ypbg" path="res://assets/textures/palettu.png" id="104_473mq"]
+[ext_resource type="Theme" uid="uid://bc4hjg04abucs" path="res://font.tres" id="104_fccuv"]
 [ext_resource type="Script" uid="uid://brdvu4bmoumot" path="res://scripts/game_manager.gd" id="105_7itva"]
 [ext_resource type="Script" uid="uid://gl7h74m5x85i" path="res://scripts/personality_manager.gd" id="109_1va0p"]
 [ext_resource type="Resource" uid="uid://d1fdxl1m767n5" path="res://resources/personality_trait/empathy.tres" id="109_rekj2"]
@@ -480,6 +482,10 @@ color_ramp = SubResource("GradientTexture1D_1va0p")
 
 [node name="Paint" type="Node2D"]
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_vnd7u")
+volume_db = -10.524
+
 [node name="Painceau6" type="Node2D" parent="."]
 process_mode = 4
 visible = false
@@ -502,7 +508,7 @@ sprite_frames = SubResource("SpriteFrames_yr4ag")
 autoplay = "default"
 
 [node name="Canvas" type="Sprite2D" parent="."]
-position = Vector2(604, 324)
+position = Vector2(604, 348)
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -528,6 +534,7 @@ offset_left = 6.0
 offset_top = 38.0
 offset_right = 150.0
 offset_bottom = 55.0
+theme = ExtResource("104_fccuv")
 min_value = 20.0
 value = 50.0
 
@@ -537,6 +544,7 @@ offset_left = 5.0
 offset_top = 7.0
 offset_right = 99.0
 offset_bottom = 30.0
+theme = ExtResource("104_fccuv")
 text = "Brush width"
 
 [node name="ColorSelector" type="GridContainer" parent="Control"]
@@ -560,6 +568,7 @@ offset_left = 66.0
 offset_top = 351.0
 offset_right = 117.0
 offset_bottom = 382.0
+theme = ExtResource("104_fccuv")
 text = "Reset"
 
 [node name="SubmitButton" type="Button" parent="Control"]
@@ -569,6 +578,7 @@ offset_left = 66.0
 offset_top = 386.0
 offset_right = 129.0
 offset_bottom = 417.0
+theme = ExtResource("104_fccuv")
 text = "Submit"
 
 [node name="Palettu" type="Sprite2D" parent="Control"]
@@ -576,9 +586,6 @@ position = Vector2(137, 172)
 rotation = -0.243728
 scale = Vector2(1.00357, 1.00357)
 texture = ExtResource("104_473mq")
-
-[node name="GameManager" type="Node2D" parent="."]
-script = ExtResource("105_7itva")
 
 [node name="SignalManager" type="Node2D" parent="."]
 script = ExtResource("2_yqjtg")
@@ -597,13 +604,37 @@ personality_traits = Array[ExtResource("5_iywne")]([ExtResource("109_rekj2"), Ex
 script = ExtResource("109_1va0p")
 personalities = Array[ExtResource("120_ip3rd")]([ExtResource("123_o5ny5"), ExtResource("124_7ss2i"), ExtResource("125_1id2h"), ExtResource("126_r2n6p"), ExtResource("127_deyyv"), ExtResource("128_vnd7u"), ExtResource("129_fccuv"), ExtResource("130_kpl5h"), ExtResource("131_nej56"), ExtResource("132_vgiqa")])
 
+[node name="GameManager" type="Node2D" parent="."]
+script = ExtResource("105_7itva")
+
 [node name="UIResults" type="Node2D" parent="."]
 position = Vector2(808, 94)
 
-[node name="Label" type="Label" parent="UIResults"]
-offset_right = 296.0
-offset_bottom = 472.0
+[node name="Label" type="RichTextLabel" parent="UIResults"]
+offset_left = -4.0
+offset_top = 76.0
+offset_right = 292.0
+offset_bottom = 548.0
+theme = ExtResource("104_fccuv")
+bbcode_enabled = true
 autowrap_mode = 2
+
+[node name="MissionLabel" type="Label" parent="UIResults"]
+offset_left = -393.0
+offset_top = -71.0
+offset_right = -353.0
+offset_bottom = -48.0
+theme = ExtResource("104_fccuv")
+
+[node name="NextMissionButton" type="Button" parent="UIResults"]
+visible = false
+offset_left = 73.0
+offset_top = 377.0
+offset_right = 265.0
+offset_bottom = 427.0
+theme = ExtResource("104_fccuv")
+theme_override_font_sizes/font_size = 30
+text = "Next Human"
 
 [node name="SparkleParticles" type="GPUParticles2D" parent="."]
 amount = 15
@@ -617,3 +648,4 @@ texture = ExtResource("133_deyyv")
 [connection signal="value_changed" from="Control/BrushWidthControl/BrushWidthSlider" to="SignalManager" method="_on_h_slider_value_changed"]
 [connection signal="pressed" from="Control/ResetButton" to="SignalManager" method="_on_reset_button_pressed"]
 [connection signal="pressed" from="Control/SubmitButton" to="SignalManager" method="_on_submit_button_pressed"]
+[connection signal="pressed" from="UIResults/NextMissionButton" to="SignalManager" method="_on_next_mission_button_pressed"]

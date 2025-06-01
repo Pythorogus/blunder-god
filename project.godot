@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Blunder God"
-run/main_scene="uid://cqgvwt6il87aj"
+run/main_scene="uid://cah752uwnyoai"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 

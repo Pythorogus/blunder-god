@@ -8,7 +8,7 @@
 script = ExtResource("2_ugju2")
 personality_antagonist_trait = ExtResource("1_0sugo")
 name = "The Rigid Weaver"
-description = "cFreezes connections into cold, unquestionable maxims"
+description = "Freezes connections into cold, unquestionable maxims"
 personality_traits = Array[ExtResource("3_ugju2")]([])
 personality_traits_percent = Array[int]([])
 personality_antagonists = Array[ExtResource("2_ugju2")]([])
