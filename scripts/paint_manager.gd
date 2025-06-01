@@ -2,7 +2,9 @@ extends Node2D
 
 @onready var canvas: Sprite2D = $"../Canvas"
 @onready var personality_trait_manager: Node2D = $"../PersonalityTraitManager"
+@onready var sparkle_particles: GPUParticles2D = $"../SparkleParticles"
 
+var canvas_color = Color.BLACK
 var image: Image
 var texture: ImageTexture
 var cursor_image: Image
@@ -10,7 +12,7 @@ var cursor_texture: ImageTexture
 var pressed: bool = false
 var last_pos: Vector2i = Vector2i.ZERO
 var brush_width: float = 50.0
-var brush_color: Color = Color(1, 0, 0, 1)
+var brush_color: Color
 var color_results: Array[ColorResult] = []
 var pixels_count: int = 0
 
@@ -31,24 +33,28 @@ func set_custom_brush_cursor(size: float):
 	Input.set_custom_mouse_cursor(cursor_texture)
 
 func _input(event):
-	if is_mouse_over_image(event.position) :
-		if event is InputEventMouseButton :
-			if event.button_index == MOUSE_BUTTON_LEFT:
-				pressed = event.pressed
+	
+	if event is InputEventMouseButton :
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			pressed = event.pressed
+			sparkle_particles.emitting = pressed
+			if pressed and is_mouse_over_image(event.position) :
 				var local_pos = get_image_pixel_from_mouse(canvas, event.position) #sprite.to_local(event.position)
 				var x = int(local_pos.x)
 				var y = int(local_pos.y)
 	
 				if x >= 0 and x < image.get_width() and y >= 0 and y < image.get_height() :
 					paint(local_pos, brush_width, brush_color)
-	
-		elif event is InputEventMouseMotion and pressed:
-			var current_pos = get_image_pixel_from_mouse(canvas, event.position)
-			last_pos = current_pos
-			paint(get_image_pixel_from_mouse(canvas, event.position), brush_width, brush_color)
-	
-		elif event is InputEventMouseButton and !pressed:
-			last_pos = Vector2i.ZERO
+			else:
+				print('RELEASE')
+				last_pos = Vector2i.ZERO
+
+	elif event is InputEventMouseMotion and pressed:
+		var current_pos = get_image_pixel_from_mouse(canvas, event.position)
+		last_pos = current_pos
+		paint(get_image_pixel_from_mouse(canvas, event.position), brush_width, brush_color)
+		sparkle_particles.global_position = event.position
+		sparkle_particles.emitting = pressed
 
 func paint(pos: Vector2, width: float, color: Color) -> void:
 	var radius := width / 2.0
@@ -60,7 +66,8 @@ func paint(pos: Vector2, width: float, color: Color) -> void:
 				var px := int(pos.x + dx)
 				var py := int(pos.y + dy)
 				if is_inside_image(Vector2(px, py)) and image.get_pixel(px, py).a != 0:
-					image.set_pixel(px, py, color)
+					var color_with_a = Color(color.r, color.g, color.b, image.get_pixel(px, py).a)
+					image.set_pixel(px, py, color_with_a)
 	
 	texture.update(image)
 
@@ -100,7 +107,8 @@ func reset() -> void:
 	for x in range(image.get_width()):
 		for y in range(image.get_height()):
 			if image.get_pixel(x, y).a != 0 :
-				image.set_pixel(x, y, Color.WHITE)
+				var color_with_a = Color(canvas_color.r, canvas_color.g, canvas_color.b, image.get_pixel(x, y).a)
+				image.set_pixel(x, y, color_with_a)
 	
 	texture.update(image)
 

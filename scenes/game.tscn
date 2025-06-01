@@ -1,4 +1,4 @@
-[gd_scene load_steps=122 format=3 uid="uid://cqgvwt6il87aj"]
+[gd_scene load_steps=132 format=3 uid="uid://cqgvwt6il87aj"]
 
 [ext_resource type="Script" uid="uid://np2uvjr7vymw" path="res://scripts/color_selector.gd" id="1_iywne"]
 [ext_resource type="Script" uid="uid://bs075mlwa5dsw" path="res://scripts/paint_manager.gd" id="1_yqjtg"]
@@ -492,6 +492,56 @@ name = "Colère"
 color = Color(0.619608, 0.054902, 0.25098, 1)
 metadata/_custom_type_script = "uid://ci2qns8fx51d0"
 
+[sub_resource type="Curve" id="Curve_473mq"]
+_limits = [-360.0, 360.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_1va0p"]
+curve = SubResource("Curve_473mq")
+
+[sub_resource type="Curve" id="Curve_2tvof"]
+_limits = [-360.0, 360.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_fsry6"]
+curve = SubResource("Curve_2tvof")
+
+[sub_resource type="Gradient" id="Gradient_473mq"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_1va0p"]
+gradient = SubResource("Gradient_473mq")
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_473mq"]
+
+[sub_resource type="Curve" id="Curve_1va0p"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_2tvof"]
+curve = SubResource("Curve_1va0p")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2tvof"]
+lifetime_randomness = 0.77
+particle_flag_disable_z = true
+angle_min = -200.0
+angle_max = 220.0
+angle_curve = SubResource("CurveTexture_1va0p")
+inherit_velocity_ratio = 50.0
+angular_velocity_min = -160.0
+angular_velocity_max = 140.0
+angular_velocity_curve = SubResource("CurveTexture_fsry6")
+directional_velocity_min = -59.0
+directional_velocity_max = 101.0
+directional_velocity_curve = SubResource("CurveXYZTexture_473mq")
+gravity = Vector3(0, 98, 0)
+scale_min = 4.0
+scale_max = 7.0
+scale_curve = SubResource("CurveTexture_2tvof")
+color_ramp = SubResource("GradientTexture1D_1va0p")
+
 [node name="Paint" type="Node2D"]
 
 [node name="Painceau6" type="Node2D" parent="."]
@@ -611,6 +661,9 @@ position = Vector2(880, 132)
 [node name="Label" type="Label" parent="UIResults"]
 offset_right = 40.0
 offset_bottom = 23.0
+
+[node name="SparkleParticles" type="GPUParticles2D" parent="."]
+process_material = SubResource("ParticleProcessMaterial_2tvof")
 
 [connection signal="value_changed" from="Control/BrushWidthControl/BrushWidthSlider" to="SignalManager" method="_on_h_slider_value_changed"]
 [connection signal="pressed" from="Control/ResetButton" to="SignalManager" method="_on_reset_button_pressed"]
