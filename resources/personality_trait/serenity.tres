@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PersonalityTrait" load_steps=2 format=3 uid="uid://mf02dgmrylvq"]
+
+[ext_resource type="Script" uid="uid://ci2qns8fx51d0" path="res://resources/personality_trait.gd" id="1_e1whh"]
+
+[resource]
+script = ExtResource("1_e1whh")
+name = "Serenity"
+color = Color(0.678431, 0.847059, 0.901961, 1)
+metadata/_custom_type_script = "uid://ci2qns8fx51d0"

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PersonalityTrait" load_steps=2 format=3 uid="uid://ced2j1h2dbwsp"]
+
+[ext_resource type="Script" uid="uid://ci2qns8fx51d0" path="res://resources/personality_trait.gd" id="1_uc2q4"]
+
+[resource]
+script = ExtResource("1_uc2q4")
+name = "Anger"
+color = Color(0.619608, 0.054902, 0.25098, 1)
+metadata/_custom_type_script = "uid://ci2qns8fx51d0"

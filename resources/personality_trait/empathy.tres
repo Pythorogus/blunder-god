@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PersonalityTrait" load_steps=2 format=3 uid="uid://d1fdxl1m767n5"]
+
+[ext_resource type="Script" uid="uid://ci2qns8fx51d0" path="res://resources/personality_trait.gd" id="1_ap8oq"]
+
+[resource]
+script = ExtResource("1_ap8oq")
+name = "Empathy"
+color = Color(0.992157, 0.423529, 0.619608, 1)
+metadata/_custom_type_script = "uid://ci2qns8fx51d0"

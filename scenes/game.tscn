@@ -1,4 +1,4 @@
-[gd_scene load_steps=132 format=3 uid="uid://cqgvwt6il87aj"]
+[gd_scene load_steps=131 format=3 uid="uid://cqgvwt6il87aj"]
 
 [ext_resource type="Script" uid="uid://np2uvjr7vymw" path="res://scripts/color_selector.gd" id="1_iywne"]
 [ext_resource type="Script" uid="uid://bs075mlwa5dsw" path="res://scripts/paint_manager.gd" id="1_yqjtg"]
@@ -109,6 +109,20 @@
 [ext_resource type="Texture2D" uid="uid://fwttcfiftf06" path="res://assets/animations/menu/Bourdieu_test.blend0059.png" id="101_max3w"]
 [ext_resource type="Texture2D" uid="uid://cupgbg6k5302l" path="res://assets/animations/menu/Bourdieu_test.blend0060.png" id="102_nmeq6"]
 [ext_resource type="Texture2D" uid="uid://b6rvtw8h2ypbg" path="res://assets/textures/palettu.png" id="104_473mq"]
+[ext_resource type="Script" uid="uid://brdvu4bmoumot" path="res://scripts/game_manager.gd" id="105_7itva"]
+[ext_resource type="Script" uid="uid://gl7h74m5x85i" path="res://scripts/personality_manager.gd" id="109_1va0p"]
+[ext_resource type="Resource" uid="uid://d1fdxl1m767n5" path="res://resources/personality_trait/empathy.tres" id="109_rekj2"]
+[ext_resource type="Resource" uid="uid://0py7mfgu4ftl" path="res://resources/personality_trait/curiosity.tres" id="110_ip3rd"]
+[ext_resource type="Resource" uid="uid://bd0ufjhpxga76" path="res://resources/personality_trait/wisdom.tres" id="111_s6met"]
+[ext_resource type="Resource" uid="uid://bd5mjnrt1flre" path="res://resources/personality_trait/confidence.tres" id="112_7itva"]
+[ext_resource type="Resource" uid="uid://b3prxdxavsrlg" path="res://resources/personality_trait/creativity.tres" id="113_o5ny5"]
+[ext_resource type="Resource" uid="uid://b0s2h1j1q1ahj" path="res://resources/personality_trait/ambition.tres" id="114_7ss2i"]
+[ext_resource type="Resource" uid="uid://crudtuktubps7" path="res://resources/personality_trait/integrity.tres" id="115_1id2h"]
+[ext_resource type="Resource" uid="uid://mf02dgmrylvq" path="res://resources/personality_trait/serenity.tres" id="116_awynl"]
+[ext_resource type="Resource" uid="uid://b7twcnc4osh62" path="res://resources/personality_trait/passion.tres" id="117_65ua2"]
+[ext_resource type="Resource" uid="uid://ced2j1h2dbwsp" path="res://resources/personality_trait/anger.tres" id="118_mowrl"]
+[ext_resource type="Script" uid="uid://c7o1ec0x5ju5o" path="res://resources/personality.gd" id="120_ip3rd"]
+[ext_resource type="Resource" uid="uid://cmw5tqwdeatef" path="res://resources/personality/weaver_of_bonds.tres" id="123_o5ny5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i1hsc"]
 animations = [{
@@ -432,89 +446,11 @@ animations = [{
 "speed": 12.0
 }]
 
-[sub_resource type="Resource" id="Resource_p57ef"]
-script = ExtResource("5_iywne")
-name = "Empathie"
-color = Color(0.992157, 0.423529, 0.619608, 1)
-metadata/_custom_type_script = "uid://ci2qns8fx51d0"
-
-[sub_resource type="Resource" id="Resource_u5sy4"]
-script = ExtResource("5_iywne")
-name = "Curiosité"
-color = Color(0.145098, 0.992157, 0.913725, 1)
-metadata/_custom_type_script = "uid://ci2qns8fx51d0"
-
-[sub_resource type="Resource" id="Resource_iywne"]
-script = ExtResource("5_iywne")
-name = "Sagesse"
-color = Color(0.294845, 0.000962037, 0.508273, 1)
-metadata/_custom_type_script = "uid://ci2qns8fx51d0"
-
-[sub_resource type="Resource" id="Resource_gee14"]
-script = ExtResource("5_iywne")
-name = "Confiance"
-color = Color(0, 0.501961, 1, 1)
-metadata/_custom_type_script = "uid://ci2qns8fx51d0"
-
-[sub_resource type="Resource" id="Resource_8tghg"]
-script = ExtResource("5_iywne")
-name = "Créativité"
-color = Color(1, 0.647059, 0, 1)
-metadata/_custom_type_script = "uid://ci2qns8fx51d0"
-
-[sub_resource type="Resource" id="Resource_473mq"]
-script = ExtResource("5_iywne")
-name = "Ambition"
-color = Color(1, 0.843137, 0, 1)
-metadata/_custom_type_script = "uid://ci2qns8fx51d0"
-
-[sub_resource type="Resource" id="Resource_1va0p"]
-script = ExtResource("5_iywne")
-name = "Intégrité"
-color = Color(0.376471, 0.376471, 0.376471, 1)
-metadata/_custom_type_script = "uid://ci2qns8fx51d0"
-
-[sub_resource type="Resource" id="Resource_2tvof"]
-script = ExtResource("5_iywne")
-name = "Sérénité"
-color = Color(0.678431, 0.847059, 0.901961, 1)
-metadata/_custom_type_script = "uid://ci2qns8fx51d0"
-
-[sub_resource type="Resource" id="Resource_fsry6"]
-script = ExtResource("5_iywne")
-name = "Passion"
-color = Color(1, 0, 0, 1)
-metadata/_custom_type_script = "uid://ci2qns8fx51d0"
-
-[sub_resource type="Resource" id="Resource_eky20"]
-script = ExtResource("5_iywne")
-name = "Colère"
-color = Color(0.619608, 0.054902, 0.25098, 1)
-metadata/_custom_type_script = "uid://ci2qns8fx51d0"
-
-[sub_resource type="Curve" id="Curve_473mq"]
-_limits = [-360.0, 360.0, 0.0, 1.0]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="CurveTexture" id="CurveTexture_1va0p"]
-curve = SubResource("Curve_473mq")
-
-[sub_resource type="Curve" id="Curve_2tvof"]
-_limits = [-360.0, 360.0, 0.0, 1.0]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="CurveTexture" id="CurveTexture_fsry6"]
-curve = SubResource("Curve_2tvof")
-
 [sub_resource type="Gradient" id="Gradient_473mq"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 0, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_1va0p"]
 gradient = SubResource("Gradient_473mq")
-
-[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_473mq"]
 
 [sub_resource type="Curve" id="Curve_1va0p"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -525,26 +461,17 @@ curve = SubResource("Curve_1va0p")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2tvof"]
 lifetime_randomness = 0.77
-particle_flag_disable_z = true
-angle_min = -200.0
-angle_max = 220.0
-angle_curve = SubResource("CurveTexture_1va0p")
-inherit_velocity_ratio = 50.0
-angular_velocity_min = -160.0
-angular_velocity_max = 140.0
-angular_velocity_curve = SubResource("CurveTexture_fsry6")
-directional_velocity_min = -59.0
-directional_velocity_max = 101.0
-directional_velocity_curve = SubResource("CurveXYZTexture_473mq")
-gravity = Vector3(0, 98, 0)
-scale_min = 4.0
-scale_max = 7.0
+direction = Vector3(0, 0, 0)
+gravity = Vector3(0, -50, 0)
+scale_min = 2.0
+scale_max = 5.0
 scale_curve = SubResource("CurveTexture_2tvof")
 color_ramp = SubResource("GradientTexture1D_1va0p")
 
 [node name="Paint" type="Node2D"]
 
 [node name="Painceau6" type="Node2D" parent="."]
+process_mode = 4
 visible = false
 z_index = 1
 
@@ -566,8 +493,6 @@ autoplay = "default"
 
 [node name="Canvas" type="Sprite2D" parent="."]
 position = Vector2(644, 304)
-
-[node name="Line2D" type="Line2D" parent="."]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -642,18 +567,25 @@ rotation = -0.243728
 scale = Vector2(1.08104, 1.08104)
 texture = ExtResource("104_473mq")
 
-[node name="PaintManager" type="Node2D" parent="."]
-script = ExtResource("1_yqjtg")
+[node name="GameManager" type="Node2D" parent="."]
+script = ExtResource("105_7itva")
 
 [node name="SignalManager" type="Node2D" parent="."]
 script = ExtResource("2_yqjtg")
 
-[node name="PersonalityTraitManager" type="Node2D" parent="."]
-script = ExtResource("3_lnu2h")
-personality_traits = Array[ExtResource("5_iywne")]([SubResource("Resource_p57ef"), SubResource("Resource_u5sy4"), SubResource("Resource_iywne"), SubResource("Resource_gee14"), SubResource("Resource_8tghg"), SubResource("Resource_473mq"), SubResource("Resource_1va0p"), SubResource("Resource_2tvof"), SubResource("Resource_fsry6"), SubResource("Resource_eky20")])
+[node name="PaintManager" type="Node2D" parent="."]
+script = ExtResource("1_yqjtg")
 
 [node name="UIManager" type="Node2D" parent="."]
 script = ExtResource("6_p57ef")
+
+[node name="PersonalityTraitManager" type="Node2D" parent="."]
+script = ExtResource("3_lnu2h")
+personality_traits = Array[ExtResource("5_iywne")]([ExtResource("109_rekj2"), ExtResource("110_ip3rd"), ExtResource("111_s6met"), ExtResource("112_7itva"), ExtResource("113_o5ny5"), ExtResource("114_7ss2i"), ExtResource("115_1id2h"), ExtResource("116_awynl"), ExtResource("117_65ua2"), ExtResource("118_mowrl")])
+
+[node name="PersonalityManager" type="Node2D" parent="."]
+script = ExtResource("109_1va0p")
+personalities = Array[ExtResource("120_ip3rd")]([ExtResource("123_o5ny5")])
 
 [node name="UIResults" type="Node2D" parent="."]
 position = Vector2(880, 132)
@@ -663,6 +595,7 @@ offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="SparkleParticles" type="GPUParticles2D" parent="."]
+amount = 15
 process_material = SubResource("ParticleProcessMaterial_2tvof")
 
 [connection signal="value_changed" from="Control/BrushWidthControl/BrushWidthSlider" to="SignalManager" method="_on_h_slider_value_changed"]

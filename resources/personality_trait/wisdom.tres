@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PersonalityTrait" load_steps=2 format=3 uid="uid://bd0ufjhpxga76"]
+
+[ext_resource type="Script" uid="uid://ci2qns8fx51d0" path="res://resources/personality_trait.gd" id="1_tbsli"]
+
+[resource]
+script = ExtResource("1_tbsli")
+name = "Wisdom"
+color = Color(0.294845, 0.000962037, 0.508273, 1)
+metadata/_custom_type_script = "uid://ci2qns8fx51d0"

@@ -33,12 +33,12 @@ func set_custom_brush_cursor(size: float):
 	Input.set_custom_mouse_cursor(cursor_texture)
 
 func _input(event):
-	
 	if event is InputEventMouseButton :
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			pressed = event.pressed
 			sparkle_particles.emitting = pressed
 			if pressed and is_mouse_over_image(event.position) :
+				sparkle_particles.global_position = event.position
 				var local_pos = get_image_pixel_from_mouse(canvas, event.position) #sprite.to_local(event.position)
 				var x = int(local_pos.x)
 				var y = int(local_pos.y)
@@ -46,15 +46,15 @@ func _input(event):
 				if x >= 0 and x < image.get_width() and y >= 0 and y < image.get_height() :
 					paint(local_pos, brush_width, brush_color)
 			else:
-				print('RELEASE')
 				last_pos = Vector2i.ZERO
 
 	elif event is InputEventMouseMotion and pressed:
 		var current_pos = get_image_pixel_from_mouse(canvas, event.position)
 		last_pos = current_pos
 		paint(get_image_pixel_from_mouse(canvas, event.position), brush_width, brush_color)
-		sparkle_particles.global_position = event.position
-		sparkle_particles.emitting = pressed
+		if is_mouse_over_image(event.position):
+			sparkle_particles.global_position = event.position
+			#sparkle_particles.emitting = pressed
 
 func paint(pos: Vector2, width: float, color: Color) -> void:
 	var radius := width / 2.0

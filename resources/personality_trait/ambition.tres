@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PersonalityTrait" load_steps=2 format=3 uid="uid://b0s2h1j1q1ahj"]
+
+[ext_resource type="Script" uid="uid://ci2qns8fx51d0" path="res://resources/personality_trait.gd" id="1_p00km"]
+
+[resource]
+script = ExtResource("1_p00km")
+name = "Ambition"
+color = Color(1, 0.843137, 0, 1)
+metadata/_custom_type_script = "uid://ci2qns8fx51d0"
