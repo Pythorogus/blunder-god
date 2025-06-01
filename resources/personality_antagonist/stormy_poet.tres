@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PersonalityAntagonist" load_steps=4 format=3 uid="uid://bfc1mo0e5k3yl"]
+
+[ext_resource type="Resource" uid="uid://b7twcnc4osh62" path="res://resources/personality_trait/passion.tres" id="1_sak2r"]
+[ext_resource type="Script" uid="uid://bbpuaiehdjss6" path="res://resources/personality_antagonist.gd" id="2_tpw30"]
+[ext_resource type="Script" uid="uid://ci2qns8fx51d0" path="res://resources/personality_trait.gd" id="3_tt3fr"]
+
+[resource]
+script = ExtResource("2_tpw30")
+personality_antagonist_trait = ExtResource("1_sak2r")
+name = "The Stormy Poet"
+description = "Incapable of constancy, burns everything around him"
+personality_traits = Array[ExtResource("3_tt3fr")]([])
+personality_traits_percent = Array[int]([])
+personality_antagonists = Array[ExtResource("2_tpw30")]([])
+metadata/_custom_type_script = "uid://bbpuaiehdjss6"

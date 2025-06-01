@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PersonalityAntagonist" load_steps=4 format=3 uid="uid://cqs5kb3oerfvp"]
+
+[ext_resource type="Script" uid="uid://ci2qns8fx51d0" path="res://resources/personality_trait.gd" id="1_ht7yn"]
+[ext_resource type="Script" uid="uid://bbpuaiehdjss6" path="res://resources/personality_antagonist.gd" id="1_vytwk"]
+[ext_resource type="Resource" uid="uid://mf02dgmrylvq" path="res://resources/personality_trait/serenity.tres" id="2_vytwk"]
+
+[resource]
+script = ExtResource("1_vytwk")
+personality_antagonist_trait = ExtResource("2_vytwk")
+name = "The Disconnected Keeper"
+description = "Meditates while everything collapses"
+personality_traits = Array[ExtResource("1_ht7yn")]([])
+personality_traits_percent = Array[int]([])
+personality_antagonists = Array[ExtResource("1_vytwk")]([])
+metadata/_custom_type_script = "uid://bbpuaiehdjss6"

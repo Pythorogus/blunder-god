@@ -1,8 +1,12 @@
-[gd_resource type="Resource" script_class="Personality" load_steps=6 format=3 uid="uid://gu6nrg5hbbkj"]
+[gd_resource type="Resource" script_class="Personality" load_steps=10 format=3 uid="uid://gu6nrg5hbbkj"]
 
+[ext_resource type="Script" uid="uid://bbpuaiehdjss6" path="res://resources/personality_antagonist.gd" id="1_b162b"]
 [ext_resource type="Script" uid="uid://ci2qns8fx51d0" path="res://resources/personality_trait.gd" id="1_o0lpv"]
+[ext_resource type="Resource" uid="uid://yjpth562po4e" path="res://resources/personality_antagonist/inflexible_bearer.tres" id="2_ih8hv"]
 [ext_resource type="Resource" uid="uid://bd0ufjhpxga76" path="res://resources/personality_trait/wisdom.tres" id="2_jajrg"]
+[ext_resource type="Resource" uid="uid://d1lqvo48vrs2c" path="res://resources/personality_antagonist/moralizing_bearer.tres" id="3_4vocb"]
 [ext_resource type="Resource" uid="uid://crudtuktubps7" path="res://resources/personality_trait/integrity.tres" id="3_7g7pg"]
+[ext_resource type="Resource" uid="uid://dt0whe8vm0wln" path="res://resources/personality_antagonist/obsessive_bearer.tres" id="4_1sxow"]
 [ext_resource type="Resource" uid="uid://0py7mfgu4ftl" path="res://resources/personality_trait/curiosity.tres" id="4_unyrr"]
 [ext_resource type="Script" uid="uid://c7o1ec0x5ju5o" path="res://resources/personality.gd" id="5_b162b"]
 
@@ -12,4 +16,5 @@ name = "The Knowledge Bearer"
 description = "Pass on ancestral knowledge, restore memory"
 personality_traits = Array[ExtResource("1_o0lpv")]([ExtResource("2_jajrg"), ExtResource("3_7g7pg"), ExtResource("4_unyrr")])
 personality_traits_percent = Array[int]([45, 35, 20])
+personality_antagonists = Array[ExtResource("1_b162b")]([ExtResource("2_ih8hv"), ExtResource("3_4vocb"), ExtResource("4_1sxow")])
 metadata/_custom_type_script = "uid://c7o1ec0x5ju5o"

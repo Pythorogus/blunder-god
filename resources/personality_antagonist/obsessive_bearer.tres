@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PersonalityAntagonist" load_steps=4 format=3 uid="uid://dt0whe8vm0wln"]
+
+[ext_resource type="Resource" uid="uid://0py7mfgu4ftl" path="res://resources/personality_trait/curiosity.tres" id="1_qh3ra"]
+[ext_resource type="Script" uid="uid://bbpuaiehdjss6" path="res://resources/personality_antagonist.gd" id="2_i6dwx"]
+[ext_resource type="Script" uid="uid://ci2qns8fx51d0" path="res://resources/personality_trait.gd" id="3_mobx5"]
+
+[resource]
+script = ExtResource("2_i6dwx")
+personality_antagonist_trait = ExtResource("1_qh3ra")
+name = "The Obsessive Bearer"
+description = "Hoards knowledge without ever sharing it"
+personality_traits = Array[ExtResource("3_mobx5")]([])
+personality_traits_percent = Array[int]([])
+personality_antagonists = Array[ExtResource("2_i6dwx")]([])
+metadata/_custom_type_script = "uid://bbpuaiehdjss6"

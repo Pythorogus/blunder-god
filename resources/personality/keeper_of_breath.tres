@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Personality" load_steps=10 format=3 uid="uid://bjtygvpskdwho"]
+
+[ext_resource type="Script" uid="uid://bbpuaiehdjss6" path="res://resources/personality_antagonist.gd" id="1_j05k6"]
+[ext_resource type="Resource" uid="uid://cqs5kb3oerfvp" path="res://resources/personality_antagonist/disconnected_keeper.tres" id="2_m2f67"]
+[ext_resource type="Resource" uid="uid://na4y1vjns8s0" path="res://resources/personality_antagonist/egocentric_keeper.tres" id="3_7nhmg"]
+[ext_resource type="Resource" uid="uid://b5aosaqa2i3wx" path="res://resources/personality_antagonist/overcome_keeper.tres" id="4_0wn6x"]
+[ext_resource type="Script" uid="uid://ci2qns8fx51d0" path="res://resources/personality_trait.gd" id="5_2ypl5"]
+[ext_resource type="Resource" uid="uid://c05pm0yj6qjuj" path="res://resources/personality_antagonist/ethereal_healer.tres" id="6_3ntgb"]
+[ext_resource type="Resource" uid="uid://bd5mjnrt1flre" path="res://resources/personality_trait/confidence.tres" id="7_trtl2"]
+[ext_resource type="Resource" uid="uid://b7twcnc4osh62" path="res://resources/personality_trait/passion.tres" id="8_jqnnj"]
+[ext_resource type="Script" uid="uid://c7o1ec0x5ju5o" path="res://resources/personality.gd" id="9_8k0ya"]
+
+[resource]
+script = ExtResource("9_8k0ya")
+name = "The Keeper of Breath"
+description = "Teach inner peace as a form of resistance"
+personality_traits = Array[ExtResource("5_2ypl5")]([ExtResource("6_3ntgb"), ExtResource("7_trtl2"), ExtResource("8_jqnnj")])
+personality_traits_percent = Array[int]([50, 30, 20])
+personality_antagonists = Array[ExtResource("1_j05k6")]([ExtResource("2_m2f67"), ExtResource("3_7nhmg"), ExtResource("4_0wn6x")])
+metadata/_custom_type_script = "uid://c7o1ec0x5ju5o"

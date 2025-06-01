@@ -1,9 +1,12 @@
-[gd_resource type="Resource" script_class="Personality" load_steps=7 format=3 uid="uid://dq128b2j7vnnd"]
+[gd_resource type="Resource" script_class="Personality" load_steps=10 format=3 uid="uid://dq128b2j7vnnd"]
 
 [ext_resource type="Script" uid="uid://ci2qns8fx51d0" path="res://resources/personality_trait.gd" id="1_4k457"]
 [ext_resource type="Script" uid="uid://bbpuaiehdjss6" path="res://resources/personality_antagonist.gd" id="1_tsq35"]
+[ext_resource type="Resource" uid="uid://46ian8tryah0" path="res://resources/personality_antagonist/uprooted_dreamer.tres" id="2_omm3f"]
 [ext_resource type="Resource" uid="uid://b3prxdxavsrlg" path="res://resources/personality_trait/creativity.tres" id="2_tsq35"]
+[ext_resource type="Resource" uid="uid://c8al68736nwkl" path="res://resources/personality_antagonist/imperial_dreamer.tres" id="3_26ldv"]
 [ext_resource type="Resource" uid="uid://b0s2h1j1q1ahj" path="res://resources/personality_trait/ambition.tres" id="3_ccwfj"]
+[ext_resource type="Resource" uid="uid://cps7u48sm0h2j" path="res://resources/personality_antagonist/dogmatic_dreamer.tres" id="4_ag6i0"]
 [ext_resource type="Resource" uid="uid://crudtuktubps7" path="res://resources/personality_trait/integrity.tres" id="4_watfm"]
 [ext_resource type="Script" uid="uid://c7o1ec0x5ju5o" path="res://resources/personality.gd" id="5_omm3f"]
 
@@ -13,5 +16,5 @@ name = "The Ingenious Dreamer"
 description = "Imagine alternative systems useful to all"
 personality_traits = Array[ExtResource("1_4k457")]([ExtResource("2_tsq35"), ExtResource("3_ccwfj"), ExtResource("4_watfm")])
 personality_traits_percent = Array[int]([45, 35, 20])
-personality_antagonists = Array[ExtResource("1_tsq35")]([])
+personality_antagonists = Array[ExtResource("1_tsq35")]([ExtResource("2_omm3f"), ExtResource("3_26ldv"), ExtResource("4_ag6i0")])
 metadata/_custom_type_script = "uid://c7o1ec0x5ju5o"

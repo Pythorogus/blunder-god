@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PersonalityAntagonist" load_steps=4 format=3 uid="uid://d4is5144xftl2"]
+
+[ext_resource type="Resource" uid="uid://b0s2h1j1q1ahj" path="res://resources/personality_trait/ambition.tres" id="1_gl4l3"]
+[ext_resource type="Script" uid="uid://bbpuaiehdjss6" path="res://resources/personality_antagonist.gd" id="2_aurkm"]
+[ext_resource type="Script" uid="uid://ci2qns8fx51d0" path="res://resources/personality_trait.gd" id="3_x550j"]
+
+[resource]
+script = ExtResource("2_aurkm")
+personality_antagonist_trait = ExtResource("1_gl4l3")
+name = "The Megalomaniac Wild Child"
+description = "Sees himself as an anarchic messiah"
+personality_traits = Array[ExtResource("3_x550j")]([])
+personality_traits_percent = Array[int]([])
+personality_antagonists = Array[ExtResource("2_aurkm")]([])
+metadata/_custom_type_script = "uid://bbpuaiehdjss6"

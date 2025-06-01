@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PersonalityAntagonist" load_steps=4 format=3 uid="uid://na4y1vjns8s0"]
+
+[ext_resource type="Resource" uid="uid://bd5mjnrt1flre" path="res://resources/personality_trait/confidence.tres" id="1_8mk1n"]
+[ext_resource type="Script" uid="uid://bbpuaiehdjss6" path="res://resources/personality_antagonist.gd" id="2_7tbls"]
+[ext_resource type="Script" uid="uid://ci2qns8fx51d0" path="res://resources/personality_trait.gd" id="3_5p7h7"]
+
+[resource]
+script = ExtResource("2_7tbls")
+personality_antagonist_trait = ExtResource("1_8mk1n")
+name = "The Egocentric Keeper"
+description = "Convinced of his inner superiority, he ignores the needs of others"
+personality_traits = Array[ExtResource("3_5p7h7")]([])
+personality_traits_percent = Array[int]([])
+personality_antagonists = Array[ExtResource("2_7tbls")]([])
+metadata/_custom_type_script = "uid://bbpuaiehdjss6"

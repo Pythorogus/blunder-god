@@ -118,8 +118,8 @@
 [ext_resource type="Resource" uid="uid://b3prxdxavsrlg" path="res://resources/personality_trait/creativity.tres" id="113_o5ny5"]
 [ext_resource type="Resource" uid="uid://b0s2h1j1q1ahj" path="res://resources/personality_trait/ambition.tres" id="114_7ss2i"]
 [ext_resource type="Resource" uid="uid://crudtuktubps7" path="res://resources/personality_trait/integrity.tres" id="115_1id2h"]
-[ext_resource type="Resource" uid="uid://mf02dgmrylvq" path="res://resources/personality_trait/serenity.tres" id="116_awynl"]
 [ext_resource type="Resource" uid="uid://b7twcnc4osh62" path="res://resources/personality_trait/passion.tres" id="117_65ua2"]
+[ext_resource type="Resource" uid="uid://c05pm0yj6qjuj" path="res://resources/personality_antagonist/ethereal_healer.tres" id="118_deyyv"]
 [ext_resource type="Resource" uid="uid://ced2j1h2dbwsp" path="res://resources/personality_trait/anger.tres" id="118_mowrl"]
 [ext_resource type="Script" uid="uid://c7o1ec0x5ju5o" path="res://resources/personality.gd" id="120_ip3rd"]
 [ext_resource type="Resource" uid="uid://cmw5tqwdeatef" path="res://resources/personality/weaver_of_bonds.tres" id="123_o5ny5"]
@@ -129,7 +129,7 @@
 [ext_resource type="Resource" uid="uid://cji2icnhbtmhu" path="res://resources/personality/strategist_of_the_living.tres" id="127_deyyv"]
 [ext_resource type="Resource" uid="uid://dcqe7yw8ec1x" path="res://resources/personality/voice_of_the_invisible.tres" id="128_vnd7u"]
 [ext_resource type="Resource" uid="uid://c3k31efihu738" path="res://resources/personality/navigator_of_crises.tres" id="129_fccuv"]
-[ext_resource type="Resource" uid="uid://bjtygvpskdwho" path="res://resources/personality/disconnected_keeper.tres" id="130_kpl5h"]
+[ext_resource type="Resource" uid="uid://bjtygvpskdwho" path="res://resources/personality/keeper_of_breath.tres" id="130_kpl5h"]
 [ext_resource type="Resource" uid="uid://dhl3olhuwyxj6" path="res://resources/personality/wild_child_of_the_future.tres" id="131_nej56"]
 [ext_resource type="Resource" uid="uid://gu6nrg5hbbkj" path="res://resources/personality/knowledge_bearer.tres" id="132_vgiqa"]
 [ext_resource type="Texture2D" uid="uid://vcb7mmb3n1o0" path="res://assets/textures/bg.png" id="133_deyyv"]
@@ -591,7 +591,7 @@ script = ExtResource("6_p57ef")
 
 [node name="PersonalityTraitManager" type="Node2D" parent="."]
 script = ExtResource("3_lnu2h")
-personality_traits = Array[ExtResource("5_iywne")]([ExtResource("109_rekj2"), ExtResource("110_ip3rd"), ExtResource("111_s6met"), ExtResource("112_7itva"), ExtResource("113_o5ny5"), ExtResource("114_7ss2i"), ExtResource("115_1id2h"), ExtResource("116_awynl"), ExtResource("117_65ua2"), ExtResource("118_mowrl")])
+personality_traits = Array[ExtResource("5_iywne")]([ExtResource("109_rekj2"), ExtResource("110_ip3rd"), ExtResource("111_s6met"), ExtResource("112_7itva"), ExtResource("113_o5ny5"), ExtResource("114_7ss2i"), ExtResource("115_1id2h"), ExtResource("118_deyyv"), ExtResource("117_65ua2"), ExtResource("118_mowrl")])
 
 [node name="PersonalityManager" type="Node2D" parent="."]
 script = ExtResource("109_1va0p")

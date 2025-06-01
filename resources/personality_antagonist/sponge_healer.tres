@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PersonalityAntagonist" load_steps=4 format=3 uid="uid://myq27nxb4xag"]
+
+[ext_resource type="Resource" uid="uid://d1fdxl1m767n5" path="res://resources/personality_trait/empathy.tres" id="1_v6ha7"]
+[ext_resource type="Script" uid="uid://bbpuaiehdjss6" path="res://resources/personality_antagonist.gd" id="2_auijx"]
+[ext_resource type="Script" uid="uid://ci2qns8fx51d0" path="res://resources/personality_trait.gd" id="3_k34dd"]
+
+[resource]
+script = ExtResource("2_auijx")
+personality_antagonist_trait = ExtResource("1_v6ha7")
+name = "The Sponge Healer"
+description = "Drowns in the wounds of the world"
+personality_traits = Array[ExtResource("3_k34dd")]([])
+personality_traits_percent = Array[int]([])
+personality_antagonists = Array[ExtResource("2_auijx")]([])
+metadata/_custom_type_script = "uid://bbpuaiehdjss6"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PersonalityAntagonist" load_steps=4 format=3 uid="uid://dsyetx3oikqvm"]
+
+[ext_resource type="Resource" uid="uid://bd0ufjhpxga76" path="res://resources/personality_trait/wisdom.tres" id="1_8gsrm"]
+[ext_resource type="Script" uid="uid://bbpuaiehdjss6" path="res://resources/personality_antagonist.gd" id="2_nli2a"]
+[ext_resource type="Script" uid="uid://ci2qns8fx51d0" path="res://resources/personality_trait.gd" id="3_m3ehp"]
+
+[resource]
+script = ExtResource("2_nli2a")
+personality_antagonist_trait = ExtResource("1_8gsrm")
+name = "The Cryptic Navigator"
+description = "Speaks only in riddles, to no effect"
+personality_traits = Array[ExtResource("3_m3ehp")]([])
+personality_traits_percent = Array[int]([])
+personality_antagonists = Array[ExtResource("2_nli2a")]([])
+metadata/_custom_type_script = "uid://bbpuaiehdjss6"

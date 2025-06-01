@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PersonalityAntagonist" load_steps=4 format=3 uid="uid://vqumx6khelgt"]
+
+[ext_resource type="Resource" uid="uid://0py7mfgu4ftl" path="res://resources/personality_trait/curiosity.tres" id="1_lww56"]
+[ext_resource type="Script" uid="uid://bbpuaiehdjss6" path="res://resources/personality_antagonist.gd" id="2_hs1i5"]
+[ext_resource type="Script" uid="uid://ci2qns8fx51d0" path="res://resources/personality_trait.gd" id="3_5k102"]
+
+[resource]
+script = ExtResource("2_hs1i5")
+personality_antagonist_trait = ExtResource("1_lww56")
+name = "The Volatile Strategist"
+description = "Constantly shifts paradigms, never builds"
+personality_traits = Array[ExtResource("3_5k102")]([])
+personality_traits_percent = Array[int]([])
+personality_antagonists = Array[ExtResource("2_hs1i5")]([])
+metadata/_custom_type_script = "uid://bbpuaiehdjss6"

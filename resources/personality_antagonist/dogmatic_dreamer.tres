@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PersonalityAntagonist" load_steps=4 format=3 uid="uid://cps7u48sm0h2j"]
+
+[ext_resource type="Resource" uid="uid://crudtuktubps7" path="res://resources/personality_trait/integrity.tres" id="1_3eb58"]
+[ext_resource type="Script" uid="uid://bbpuaiehdjss6" path="res://resources/personality_antagonist.gd" id="2_mcml1"]
+[ext_resource type="Script" uid="uid://ci2qns8fx51d0" path="res://resources/personality_trait.gd" id="3_8uq0d"]
+
+[resource]
+script = ExtResource("2_mcml1")
+personality_antagonist_trait = ExtResource("1_3eb58")
+name = "The Dogmatic Dreamer"
+description = "Refuses all compromise, even for the common good"
+personality_traits = Array[ExtResource("3_8uq0d")]([])
+personality_traits_percent = Array[int]([])
+personality_antagonists = Array[ExtResource("2_mcml1")]([])
+metadata/_custom_type_script = "uid://bbpuaiehdjss6"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PersonalityAntagonist" load_steps=4 format=3 uid="uid://c8al68736nwkl"]
+
+[ext_resource type="Resource" uid="uid://b0s2h1j1q1ahj" path="res://resources/personality_trait/ambition.tres" id="1_q2myn"]
+[ext_resource type="Script" uid="uid://bbpuaiehdjss6" path="res://resources/personality_antagonist.gd" id="2_wq6sr"]
+[ext_resource type="Script" uid="uid://ci2qns8fx51d0" path="res://resources/personality_trait.gd" id="3_mthgn"]
+
+[resource]
+script = ExtResource("2_wq6sr")
+personality_antagonist_trait = ExtResource("1_q2myn")
+name = "The Imperial Dreamer"
+description = "Imposes their vision as divine truth"
+personality_traits = Array[ExtResource("3_mthgn")]([])
+personality_traits_percent = Array[int]([])
+personality_antagonists = Array[ExtResource("2_wq6sr")]([])
+metadata/_custom_type_script = "uid://bbpuaiehdjss6"

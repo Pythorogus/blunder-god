@@ -1,8 +1,12 @@
-[gd_resource type="Resource" script_class="Personality" load_steps=6 format=3 uid="uid://cw21dhvsxv3m2"]
+[gd_resource type="Resource" script_class="Personality" load_steps=10 format=3 uid="uid://cw21dhvsxv3m2"]
 
 [ext_resource type="Script" uid="uid://ci2qns8fx51d0" path="res://resources/personality_trait.gd" id="1_b86n8"]
+[ext_resource type="Script" uid="uid://bbpuaiehdjss6" path="res://resources/personality_antagonist.gd" id="1_uo68m"]
+[ext_resource type="Resource" uid="uid://nwcvnn4pdosr" path="res://resources/personality_antagonist/whimsical.poet.tres" id="2_c1qve"]
 [ext_resource type="Resource" uid="uid://b3prxdxavsrlg" path="res://resources/personality_trait/creativity.tres" id="2_p35tr"]
+[ext_resource type="Resource" uid="uid://bfc1mo0e5k3yl" path="res://resources/personality_antagonist/stormy_poet.tres" id="3_cpc3w"]
 [ext_resource type="Resource" uid="uid://b7twcnc4osh62" path="res://resources/personality_trait/passion.tres" id="3_uo68m"]
+[ext_resource type="Resource" uid="uid://bmfrhhc5ps03a" path="res://resources/personality_antagonist/intrusive_poet.tres" id="4_6a5ub"]
 [ext_resource type="Resource" uid="uid://0py7mfgu4ftl" path="res://resources/personality_trait/curiosity.tres" id="4_c1qve"]
 [ext_resource type="Script" uid="uid://c7o1ec0x5ju5o" path="res://resources/personality.gd" id="5_cpc3w"]
 
@@ -12,4 +16,5 @@ name = "The Poet of the Ordinary"
 description = "Re-enchant daily life, awaken sensitivity"
 personality_traits = Array[ExtResource("1_b86n8")]([ExtResource("2_p35tr"), ExtResource("3_uo68m"), ExtResource("4_c1qve")])
 personality_traits_percent = Array[int]([40, 40, 20])
+personality_antagonists = Array[ExtResource("1_uo68m")]([ExtResource("2_c1qve"), ExtResource("3_cpc3w"), ExtResource("4_6a5ub")])
 metadata/_custom_type_script = "uid://c7o1ec0x5ju5o"

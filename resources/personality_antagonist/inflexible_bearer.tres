@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PersonalityAntagonist" load_steps=4 format=3 uid="uid://yjpth562po4e"]
+
+[ext_resource type="Resource" uid="uid://bd0ufjhpxga76" path="res://resources/personality_trait/wisdom.tres" id="1_8cejs"]
+[ext_resource type="Script" uid="uid://bbpuaiehdjss6" path="res://resources/personality_antagonist.gd" id="2_p8jd2"]
+[ext_resource type="Script" uid="uid://ci2qns8fx51d0" path="res://resources/personality_trait.gd" id="3_gl7ow"]
+
+[resource]
+script = ExtResource("2_p8jd2")
+personality_antagonist_trait = ExtResource("1_8cejs")
+name = "The Inflexible Bearer"
+description = "Locks knowledge into rigid dogma"
+personality_traits = Array[ExtResource("3_gl7ow")]([])
+personality_traits_percent = Array[int]([])
+personality_antagonists = Array[ExtResource("2_p8jd2")]([])
+metadata/_custom_type_script = "uid://bbpuaiehdjss6"

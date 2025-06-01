@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PersonalityAntagonist" load_steps=4 format=3 uid="uid://dcgal78p80fra"]
+
+[ext_resource type="Resource" uid="uid://bd5mjnrt1flre" path="res://resources/personality_trait/confidence.tres" id="1_q1ldt"]
+[ext_resource type="Script" uid="uid://bbpuaiehdjss6" path="res://resources/personality_antagonist.gd" id="2_1nvfa"]
+[ext_resource type="Script" uid="uid://ci2qns8fx51d0" path="res://resources/personality_trait.gd" id="3_t4ajm"]
+
+[resource]
+script = ExtResource("2_1nvfa")
+personality_antagonist_trait = ExtResource("1_q1ldt")
+name = "The Arrogant Navigator"
+description = "Ignores warning signs, convinced she's always right"
+personality_traits = Array[ExtResource("3_t4ajm")]([])
+personality_traits_percent = Array[int]([])
+personality_antagonists = Array[ExtResource("2_1nvfa")]([])
+metadata/_custom_type_script = "uid://bbpuaiehdjss6"

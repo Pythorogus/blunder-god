@@ -1,8 +1,12 @@
-[gd_resource type="Resource" script_class="Personality" load_steps=6 format=3 uid="uid://cji2icnhbtmhu"]
+[gd_resource type="Resource" script_class="Personality" load_steps=10 format=3 uid="uid://cji2icnhbtmhu"]
 
 [ext_resource type="Script" uid="uid://ci2qns8fx51d0" path="res://resources/personality_trait.gd" id="1_3ec16"]
+[ext_resource type="Script" uid="uid://bbpuaiehdjss6" path="res://resources/personality_antagonist.gd" id="1_etjrs"]
+[ext_resource type="Resource" uid="uid://d0d5t81wokwsy" path="res://resources/personality_antagonist/obscure_strategist.tres" id="2_cwyt6"]
 [ext_resource type="Resource" uid="uid://bd0ufjhpxga76" path="res://resources/personality_trait/wisdom.tres" id="2_tb1mn"]
 [ext_resource type="Resource" uid="uid://b0s2h1j1q1ahj" path="res://resources/personality_trait/ambition.tres" id="3_633x0"]
+[ext_resource type="Resource" uid="uid://d25eucy256ukm" path="res://resources/personality_antagonist/conquering_strategist.tres" id="3_ghcy6"]
+[ext_resource type="Resource" uid="uid://vqumx6khelgt" path="res://resources/personality_antagonist/volatile_strategist.tres" id="4_cryrd"]
 [ext_resource type="Resource" uid="uid://0py7mfgu4ftl" path="res://resources/personality_trait/curiosity.tres" id="4_s3nq4"]
 [ext_resource type="Script" uid="uid://c7o1ec0x5ju5o" path="res://resources/personality.gd" id="5_etjrs"]
 
@@ -12,4 +16,5 @@ name = "The Strategist of the Living"
 description = "Rethink the human–nature relationship"
 personality_traits = Array[ExtResource("1_3ec16")]([ExtResource("2_tb1mn"), ExtResource("3_633x0"), ExtResource("4_s3nq4")])
 personality_traits_percent = Array[int]([45, 30, 25])
+personality_antagonists = Array[ExtResource("1_etjrs")]([ExtResource("2_cwyt6"), ExtResource("3_ghcy6"), ExtResource("4_cryrd")])
 metadata/_custom_type_script = "uid://c7o1ec0x5ju5o"

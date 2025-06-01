@@ -1,8 +1,12 @@
-[gd_resource type="Resource" script_class="Personality" load_steps=6 format=3 uid="uid://dcqe7yw8ec1x"]
+[gd_resource type="Resource" script_class="Personality" load_steps=10 format=3 uid="uid://dcqe7yw8ec1x"]
 
 [ext_resource type="Script" uid="uid://ci2qns8fx51d0" path="res://resources/personality_trait.gd" id="1_n3lrv"]
+[ext_resource type="Script" uid="uid://bbpuaiehdjss6" path="res://resources/personality_antagonist.gd" id="1_qdh2l"]
+[ext_resource type="Resource" uid="uid://c4srjk0nmg7s6" path="res://resources/personality_antagonist/vengeful_voice.tres" id="2_hrv03"]
 [ext_resource type="Resource" uid="uid://ced2j1h2dbwsp" path="res://resources/personality_trait/anger.tres" id="2_hx5vu"]
 [ext_resource type="Resource" uid="uid://crudtuktubps7" path="res://resources/personality_trait/integrity.tres" id="3_qgncu"]
+[ext_resource type="Resource" uid="uid://cs1hyfg61lwg1" path="res://resources/personality_antagonist/uncompromising_voice.tres" id="3_vgo7f"]
+[ext_resource type="Resource" uid="uid://c070ask0kop4l" path="res://resources/personality_antagonist/obsessed_voice.tres" id="4_pd0ms"]
 [ext_resource type="Resource" uid="uid://b7twcnc4osh62" path="res://resources/personality_trait/passion.tres" id="4_pmc4d"]
 [ext_resource type="Script" uid="uid://c7o1ec0x5ju5o" path="res://resources/personality.gd" id="5_qdh2l"]
 
@@ -12,4 +16,5 @@ name = "The Voice of the Invisible"
 description = "Give voice to the oppressed, fight injustice"
 personality_traits = Array[ExtResource("1_n3lrv")]([ExtResource("2_hx5vu"), ExtResource("3_qgncu"), ExtResource("4_pmc4d")])
 personality_traits_percent = Array[int]([40, 35, 25])
+personality_antagonists = Array[ExtResource("1_qdh2l")]([ExtResource("2_hrv03"), ExtResource("3_vgo7f"), ExtResource("4_pd0ms")])
 metadata/_custom_type_script = "uid://c7o1ec0x5ju5o"

@@ -1,10 +1,13 @@
-[gd_resource type="Resource" script_class="Personality" load_steps=7 format=3 uid="uid://dhl3olhuwyxj6"]
+[gd_resource type="Resource" script_class="Personality" load_steps=10 format=3 uid="uid://dhl3olhuwyxj6"]
 
 [ext_resource type="Script" uid="uid://bbpuaiehdjss6" path="res://resources/personality_antagonist.gd" id="1_ce37q"]
 [ext_resource type="Script" uid="uid://ci2qns8fx51d0" path="res://resources/personality_trait.gd" id="1_qaysu"]
 [ext_resource type="Resource" uid="uid://b3prxdxavsrlg" path="res://resources/personality_trait/creativity.tres" id="2_ce37q"]
+[ext_resource type="Resource" uid="uid://cegrpqvpldrgr" path="res://resources/personality_antagonist/destructive_wild_child.tres" id="2_x4g2r"]
+[ext_resource type="Resource" uid="uid://d4is5144xftl2" path="res://resources/personality_antagonist/megalomaniac_wild_child.tres" id="3_5d61k"]
 [ext_resource type="Resource" uid="uid://b0s2h1j1q1ahj" path="res://resources/personality_trait/ambition.tres" id="3_xspyd"]
 [ext_resource type="Resource" uid="uid://ced2j1h2dbwsp" path="res://resources/personality_trait/anger.tres" id="4_1piob"]
+[ext_resource type="Resource" uid="uid://cu558meo6ctq6" path="res://resources/personality_antagonist/explosive_wild_child.tres" id="4_vkmty"]
 [ext_resource type="Script" uid="uid://c7o1ec0x5ju5o" path="res://resources/personality.gd" id="5_x4g2r"]
 
 [resource]
@@ -13,5 +16,5 @@ name = "The Wild Child of the Future"
 description = "Break absurd norms, invent radical freedom"
 personality_traits = Array[ExtResource("1_qaysu")]([ExtResource("2_ce37q"), ExtResource("3_xspyd"), ExtResource("4_1piob")])
 personality_traits_percent = Array[int]([50, 30, 20])
-personality_antagonists = Array[ExtResource("1_ce37q")]([])
+personality_antagonists = Array[ExtResource("1_ce37q")]([ExtResource("2_x4g2r"), ExtResource("3_5d61k"), ExtResource("4_vkmty")])
 metadata/_custom_type_script = "uid://c7o1ec0x5ju5o"

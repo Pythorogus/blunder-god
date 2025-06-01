@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PersonalityAntagonist" load_steps=4 format=3 uid="uid://bmfrhhc5ps03a"]
+
+[ext_resource type="Resource" uid="uid://0py7mfgu4ftl" path="res://resources/personality_trait/curiosity.tres" id="1_7eoak"]
+[ext_resource type="Script" uid="uid://bbpuaiehdjss6" path="res://resources/personality_antagonist.gd" id="2_ifsj8"]
+[ext_resource type="Script" uid="uid://ci2qns8fx51d0" path="res://resources/personality_trait.gd" id="3_tgxy7"]
+
+[resource]
+script = ExtResource("2_ifsj8")
+personality_antagonist_trait = ExtResource("1_7eoak")
+name = "The Intrusive Poet"
+description = "Dares everything—even exposing others' intimate truths"
+personality_traits = Array[ExtResource("3_tgxy7")]([])
+personality_traits_percent = Array[int]([])
+personality_antagonists = Array[ExtResource("2_ifsj8")]([])
+metadata/_custom_type_script = "uid://bbpuaiehdjss6"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PersonalityAntagonist" load_steps=4 format=3 uid="uid://d1lqvo48vrs2c"]
+
+[ext_resource type="Resource" uid="uid://crudtuktubps7" path="res://resources/personality_trait/integrity.tres" id="1_vi4r1"]
+[ext_resource type="Script" uid="uid://bbpuaiehdjss6" path="res://resources/personality_antagonist.gd" id="2_kdsyy"]
+[ext_resource type="Script" uid="uid://ci2qns8fx51d0" path="res://resources/personality_trait.gd" id="3_3bqri"]
+
+[resource]
+script = ExtResource("2_kdsyy")
+personality_antagonist_trait = ExtResource("1_vi4r1")
+name = "The Moralizing Bearer"
+description = "Sees ignorance as a moral failure"
+personality_traits = Array[ExtResource("3_3bqri")]([])
+personality_traits_percent = Array[int]([])
+personality_antagonists = Array[ExtResource("2_kdsyy")]([])
+metadata/_custom_type_script = "uid://bbpuaiehdjss6"
