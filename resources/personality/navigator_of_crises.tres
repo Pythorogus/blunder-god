@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Personality" load_steps=6 format=3 uid="uid://c3k31efihu738"]
+
+[ext_resource type="Script" uid="uid://ci2qns8fx51d0" path="res://resources/personality_trait.gd" id="1_skomu"]
+[ext_resource type="Resource" uid="uid://bd5mjnrt1flre" path="res://resources/personality_trait/confidence.tres" id="2_kv46r"]
+[ext_resource type="Resource" uid="uid://bd0ufjhpxga76" path="res://resources/personality_trait/wisdom.tres" id="3_hu2xi"]
+[ext_resource type="Resource" uid="uid://mf02dgmrylvq" path="res://resources/personality_trait/serenity.tres" id="4_nj6gs"]
+[ext_resource type="Script" uid="uid://c7o1ec0x5ju5o" path="res://resources/personality.gd" id="5_tdwhk"]
+
+[resource]
+script = ExtResource("5_tdwhk")
+name = "The Navigator of Crises"
+description = "Guide calmly through chaos"
+personality_traits = Array[ExtResource("1_skomu")]([ExtResource("2_kv46r"), ExtResource("3_hu2xi"), ExtResource("4_nj6gs")])
+personality_traits_percent = Array[int]([50, 30, 20])
+metadata/_custom_type_script = "uid://c7o1ec0x5ju5o"

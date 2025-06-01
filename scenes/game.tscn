@@ -1,4 +1,4 @@
-[gd_scene load_steps=131 format=3 uid="uid://cqgvwt6il87aj"]
+[gd_scene load_steps=141 format=3 uid="uid://cqgvwt6il87aj"]
 
 [ext_resource type="Script" uid="uid://np2uvjr7vymw" path="res://scripts/color_selector.gd" id="1_iywne"]
 [ext_resource type="Script" uid="uid://bs075mlwa5dsw" path="res://scripts/paint_manager.gd" id="1_yqjtg"]
@@ -123,6 +123,16 @@
 [ext_resource type="Resource" uid="uid://ced2j1h2dbwsp" path="res://resources/personality_trait/anger.tres" id="118_mowrl"]
 [ext_resource type="Script" uid="uid://c7o1ec0x5ju5o" path="res://resources/personality.gd" id="120_ip3rd"]
 [ext_resource type="Resource" uid="uid://cmw5tqwdeatef" path="res://resources/personality/weaver_of_bonds.tres" id="123_o5ny5"]
+[ext_resource type="Resource" uid="uid://dq128b2j7vnnd" path="res://resources/personality/ingenious_dreamer.tres" id="124_7ss2i"]
+[ext_resource type="Resource" uid="uid://c6bbrx4r6w03" path="res://resources/personality/healer_of_memories.tres" id="125_1id2h"]
+[ext_resource type="Resource" uid="uid://cw21dhvsxv3m2" path="res://resources/personality/poet_of_the_ordinary.tres" id="126_r2n6p"]
+[ext_resource type="Resource" uid="uid://cji2icnhbtmhu" path="res://resources/personality/strategist_of_the_living.tres" id="127_deyyv"]
+[ext_resource type="Resource" uid="uid://dcqe7yw8ec1x" path="res://resources/personality/voice_of_the_invisible.tres" id="128_vnd7u"]
+[ext_resource type="Resource" uid="uid://c3k31efihu738" path="res://resources/personality/navigator_of_crises.tres" id="129_fccuv"]
+[ext_resource type="Resource" uid="uid://bjtygvpskdwho" path="res://resources/personality/disconnected_keeper.tres" id="130_kpl5h"]
+[ext_resource type="Resource" uid="uid://dhl3olhuwyxj6" path="res://resources/personality/wild_child_of_the_future.tres" id="131_nej56"]
+[ext_resource type="Resource" uid="uid://gu6nrg5hbbkj" path="res://resources/personality/knowledge_bearer.tres" id="132_vgiqa"]
+[ext_resource type="Texture2D" uid="uid://vcb7mmb3n1o0" path="res://assets/textures/bg.png" id="133_deyyv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i1hsc"]
 animations = [{
@@ -585,7 +595,7 @@ personality_traits = Array[ExtResource("5_iywne")]([ExtResource("109_rekj2"), Ex
 
 [node name="PersonalityManager" type="Node2D" parent="."]
 script = ExtResource("109_1va0p")
-personalities = Array[ExtResource("120_ip3rd")]([ExtResource("123_o5ny5")])
+personalities = Array[ExtResource("120_ip3rd")]([ExtResource("123_o5ny5"), ExtResource("124_7ss2i"), ExtResource("125_1id2h"), ExtResource("126_r2n6p"), ExtResource("127_deyyv"), ExtResource("128_vnd7u"), ExtResource("129_fccuv"), ExtResource("130_kpl5h"), ExtResource("131_nej56"), ExtResource("132_vgiqa")])
 
 [node name="UIResults" type="Node2D" parent="."]
 position = Vector2(808, 94)
@@ -598,6 +608,11 @@ autowrap_mode = 2
 [node name="SparkleParticles" type="GPUParticles2D" parent="."]
 amount = 15
 process_material = SubResource("ParticleProcessMaterial_2tvof")
+
+[node name="Bg" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(577, 324)
+texture = ExtResource("133_deyyv")
 
 [connection signal="value_changed" from="Control/BrushWidthControl/BrushWidthSlider" to="SignalManager" method="_on_h_slider_value_changed"]
 [connection signal="pressed" from="Control/ResetButton" to="SignalManager" method="_on_reset_button_pressed"]

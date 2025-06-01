@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Personality" load_steps=7 format=3 uid="uid://dhl3olhuwyxj6"]
+
+[ext_resource type="Script" uid="uid://bbpuaiehdjss6" path="res://resources/personality_antagonist.gd" id="1_ce37q"]
+[ext_resource type="Script" uid="uid://ci2qns8fx51d0" path="res://resources/personality_trait.gd" id="1_qaysu"]
+[ext_resource type="Resource" uid="uid://b3prxdxavsrlg" path="res://resources/personality_trait/creativity.tres" id="2_ce37q"]
+[ext_resource type="Resource" uid="uid://b0s2h1j1q1ahj" path="res://resources/personality_trait/ambition.tres" id="3_xspyd"]
+[ext_resource type="Resource" uid="uid://ced2j1h2dbwsp" path="res://resources/personality_trait/anger.tres" id="4_1piob"]
+[ext_resource type="Script" uid="uid://c7o1ec0x5ju5o" path="res://resources/personality.gd" id="5_x4g2r"]
+
+[resource]
+script = ExtResource("5_x4g2r")
+name = "The Wild Child of the Future"
+description = "Break absurd norms, invent radical freedom"
+personality_traits = Array[ExtResource("1_qaysu")]([ExtResource("2_ce37q"), ExtResource("3_xspyd"), ExtResource("4_1piob")])
+personality_traits_percent = Array[int]([50, 30, 20])
+personality_antagonists = Array[ExtResource("1_ce37q")]([])
+metadata/_custom_type_script = "uid://c7o1ec0x5ju5o"

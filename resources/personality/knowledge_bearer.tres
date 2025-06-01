@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Personality" load_steps=6 format=3 uid="uid://gu6nrg5hbbkj"]
+
+[ext_resource type="Script" uid="uid://ci2qns8fx51d0" path="res://resources/personality_trait.gd" id="1_o0lpv"]
+[ext_resource type="Resource" uid="uid://bd0ufjhpxga76" path="res://resources/personality_trait/wisdom.tres" id="2_jajrg"]
+[ext_resource type="Resource" uid="uid://crudtuktubps7" path="res://resources/personality_trait/integrity.tres" id="3_7g7pg"]
+[ext_resource type="Resource" uid="uid://0py7mfgu4ftl" path="res://resources/personality_trait/curiosity.tres" id="4_unyrr"]
+[ext_resource type="Script" uid="uid://c7o1ec0x5ju5o" path="res://resources/personality.gd" id="5_b162b"]
+
+[resource]
+script = ExtResource("5_b162b")
+name = "The Knowledge Bearer"
+description = "Pass on ancestral knowledge, restore memory"
+personality_traits = Array[ExtResource("1_o0lpv")]([ExtResource("2_jajrg"), ExtResource("3_7g7pg"), ExtResource("4_unyrr")])
+personality_traits_percent = Array[int]([45, 35, 20])
+metadata/_custom_type_script = "uid://c7o1ec0x5ju5o"

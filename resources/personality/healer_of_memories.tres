@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Personality" load_steps=6 format=3 uid="uid://c6bbrx4r6w03"]
+
+[ext_resource type="Script" uid="uid://ci2qns8fx51d0" path="res://resources/personality_trait.gd" id="1_mlwxv"]
+[ext_resource type="Resource" uid="uid://bd0ufjhpxga76" path="res://resources/personality_trait/wisdom.tres" id="2_r7y44"]
+[ext_resource type="Resource" uid="uid://d1fdxl1m767n5" path="res://resources/personality_trait/empathy.tres" id="3_jj8m7"]
+[ext_resource type="Resource" uid="uid://mf02dgmrylvq" path="res://resources/personality_trait/serenity.tres" id="4_bpp4l"]
+[ext_resource type="Script" uid="uid://c7o1ec0x5ju5o" path="res://resources/personality.gd" id="5_2bc72"]
+
+[resource]
+script = ExtResource("5_2bc72")
+name = "The Healer of Memories"
+description = "Transform collective pain into power"
+personality_traits = Array[ExtResource("1_mlwxv")]([ExtResource("2_r7y44"), ExtResource("3_jj8m7"), ExtResource("4_bpp4l")])
+personality_traits_percent = Array[int]([40, 35, 25])
+metadata/_custom_type_script = "uid://c7o1ec0x5ju5o"

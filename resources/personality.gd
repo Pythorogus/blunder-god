@@ -5,3 +5,4 @@ class_name Personality
 @export var description: String
 @export var personality_traits: Array[PersonalityTrait]
 @export var personality_traits_percent: Array[int]
+@export var personality_antagonists : Array[PersonalityAntagonist]

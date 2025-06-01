@@ -1,9 +1,13 @@
-[gd_resource type="Resource" script_class="Personality" load_steps=6 format=3 uid="uid://cmw5tqwdeatef"]
+[gd_resource type="Resource" script_class="Personality" load_steps=10 format=3 uid="uid://cmw5tqwdeatef"]
 
 [ext_resource type="Script" uid="uid://ci2qns8fx51d0" path="res://resources/personality_trait.gd" id="1_rl23m"]
+[ext_resource type="Script" uid="uid://bbpuaiehdjss6" path="res://resources/personality_antagonist.gd" id="1_v0qxl"]
+[ext_resource type="Resource" uid="uid://bbcefypbeip7p" path="res://resources/personality_antagonist/overwhelmed_weaver.tres" id="2_jq2e3"]
 [ext_resource type="Resource" uid="uid://d1fdxl1m767n5" path="res://resources/personality_trait/empathy.tres" id="2_v0qxl"]
 [ext_resource type="Resource" uid="uid://0py7mfgu4ftl" path="res://resources/personality_trait/curiosity.tres" id="3_f7jnp"]
+[ext_resource type="Resource" uid="uid://fca4oybbsh8i" path="res://resources/personality_antagonist/nosy_weaver.tres" id="3_rmphi"]
 [ext_resource type="Resource" uid="uid://bd0ufjhpxga76" path="res://resources/personality_trait/wisdom.tres" id="4_8be16"]
+[ext_resource type="Resource" uid="uid://mf2w8cgdf8af" path="res://resources/personality_antagonist/rigid_weaver.tres" id="4_f451i"]
 [ext_resource type="Script" uid="uid://c7o1ec0x5ju5o" path="res://resources/personality.gd" id="5_jq2e3"]
 
 [resource]
@@ -12,4 +16,5 @@ name = "The Weaver of Bonds"
 description = "Reconcile communities, weave common ground"
 personality_traits = Array[ExtResource("1_rl23m")]([ExtResource("2_v0qxl"), ExtResource("3_f7jnp"), ExtResource("4_8be16")])
 personality_traits_percent = Array[int]([50, 30, 20])
+personality_antagonists = Array[ExtResource("1_v0qxl")]([ExtResource("2_jq2e3"), ExtResource("3_rmphi"), ExtResource("4_f451i")])
 metadata/_custom_type_script = "uid://c7o1ec0x5ju5o"

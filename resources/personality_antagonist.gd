@@ -1,0 +1,4 @@
+extends Personality
+class_name PersonalityAntagonist
+
+@export var personality_antagonist_trait: PersonalityTrait

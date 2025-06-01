@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Personality" load_steps=6 format=3 uid="uid://bjtygvpskdwho"]
+
+[ext_resource type="Script" uid="uid://ci2qns8fx51d0" path="res://resources/personality_trait.gd" id="1_ht7yn"]
+[ext_resource type="Resource" uid="uid://mf02dgmrylvq" path="res://resources/personality_trait/serenity.tres" id="2_vytwk"]
+[ext_resource type="Resource" uid="uid://bd5mjnrt1flre" path="res://resources/personality_trait/confidence.tres" id="3_70bvk"]
+[ext_resource type="Resource" uid="uid://b7twcnc4osh62" path="res://resources/personality_trait/passion.tres" id="4_8ug36"]
+[ext_resource type="Script" uid="uid://c7o1ec0x5ju5o" path="res://resources/personality.gd" id="5_752vb"]
+
+[resource]
+script = ExtResource("5_752vb")
+name = "The Disconnected Keeper"
+description = "Meditates while everything collapses"
+personality_traits = Array[ExtResource("1_ht7yn")]([ExtResource("2_vytwk"), ExtResource("3_70bvk"), ExtResource("4_8ug36")])
+personality_traits_percent = Array[int]([50, 30, 20])
+metadata/_custom_type_script = "uid://c7o1ec0x5ju5o"

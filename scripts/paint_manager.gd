@@ -131,8 +131,6 @@ func get_results() -> Array[ColorResult] :
 
 	for cr2 in color_results:
 		if cr2.pixels > 0:
-			print("PIXELS " + cr2.personality_trait.name + " : " + str(cr2.pixels))
-			print(pixels_count)
 			cr2.percent = round_to_dec(cr2.pixels / float(pixels_count) * 100, 2)
 	
 	return color_results
